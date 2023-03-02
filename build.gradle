@@ -23,13 +23,16 @@ dependencies {
 
     // Getter,Setter,생성자,toString 등 어노테이션 생성
     implementation('org.projectlombok:lombok')
+    // Junit 테스트 라이브러리
     implementation 'org.junit.jupiter:junit-jupiter:5.8.2'
     implementation 'org.springframework.boot:spring-boot-starter-test'
     annotationProcessor('org.projectlombok:lombok')
     testImplementation('org.projectlombok:lombok')
     testAnnotationProcessor('org.projectlombok:lombok')
 
+    // 스프링부트용 Spring Data JPA 추상화 라이브러리
     implementation('org.springframework.boot:spring-boot-starter-data-jpa')
     implementation("org.mariadb.jdbc:mariadb-java-client")
+    // 메모리 관계형 데이터베이스, 의존성만으로 관리, 재시작 시 초기화되며 테스트 용도로 많이 사용
     implementation('com.h2database:h2')
 }
