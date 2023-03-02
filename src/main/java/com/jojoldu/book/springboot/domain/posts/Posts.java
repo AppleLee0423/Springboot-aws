@@ -1,5 +1,6 @@
 package com.jojoldu.book.springboot.domain.posts;
 
+import com.jojoldu.book.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,7 +14,7 @@ import javax.persistence.*;
 // 테이블과 링크될 클래스라는 걸 표시, SalesManager.java -> sales_manager table
 @Entity
 // 주요 어노테이션을 클래스와 가까이 두면 마이그레이션 시 롬복 쉽게 삭제 가능
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     // 해당 테이블의 PK
     // Long 타입의 auto increment를 추천, 주민번호, 복합키 등은 유니크 키로 별도 추가 권장
