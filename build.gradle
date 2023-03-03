@@ -1,9 +1,10 @@
 plugins {
     id 'java'
     id 'eclipse'
-    id 'org.springframework.boot' version '2.7.1'
+    id 'org.springframework.boot' version '2.6.7'
     id 'io.spring.dependency-management' version '1.0.12.RELEASE'
 }
+// 2.7.1 버전에서 한글깨짐 이슈가 있어 2.6.2로 다운그레이드 하였음
 
 group 'com.jojoldu.book'
 version '1.0-SNAPSHOT'
