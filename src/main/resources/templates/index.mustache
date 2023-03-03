@@ -1,10 +1,47 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 <head>
+    <meta http-equiv="Content-Type" content="text/html;" charset="UTF-8" />
     <title>Spring Boot Web Service</title>
-    <meta http-equiv="Content-Type" content="test/html; charset=UTF-8" />
 </head>
 <body>
-    <h1>Spring Boot Web Service</h1>
+
+{{>layout/header}}
+
+    <h1>Spring Boot Web Service Ver.2</h1>
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-6">
+                <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
+            </div>
+        </div>
+        <br>
+        <!-- 목록 출력 영역 -->
+        <table class="table table-horizontal table-bordered">
+            <thead class="thead-string">
+            <tr>
+                <th>게시글번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>최종수정일</th>
+            </tr>
+            </thead>
+            <tbody id="tbody">
+            <!--posts 리스트 반복문-->
+            {{#posts}}
+                <tr>
+                    <!-- list에서 뽑아낸 객체의 필드-->
+                    <td>{{id}}</td>
+                    <td>{{title}}</td>
+                    <td>{{author}}</td>
+                    <td>{{modifiedDate}}</td>
+                </tr>
+            {{/posts}}
+            </tbody>
+        </table>
+    </div>
+
+{{>layout/footer}}
+
 </body>
 </html>
