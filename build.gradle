@@ -19,6 +19,7 @@ test { // (2)
 dependencies {
     //(3)
     implementation('org.springframework.boot:spring-boot-starter-web')
+    //머스테치 템플릿 엔진
     implementation('org.springframework.boot:spring-boot-starter-mustache')
 
     // Getter,Setter,생성자,toString 등 어노테이션 생성
