@@ -10,9 +10,20 @@
 
     <h1>Spring Boot Web Service Ver.2</h1>
     <div class="col-md-12">
+        <!-- 로그인 기능 영역 -->
         <div class="row">
             <div class="col-md-6">
                 <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
+                <!-- if문 대신 true or false 로 구분하는 기능-->
+                {{#userName}}
+                    Logged in as: <span id="user">{{userName}}</span>
+                    <!-- Spring Security에서 기본 제공하는 로그아웃 URL -->
+                    <a href="/logout" class="btn btn-info active" role="button">Logout</a>
+                {{/userName}}
+                <!-- ^ : 값이 존재하지 않을때 -->
+                {{^userName}}
+                    <a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google Login</a>
+                {{/userName}}
             </div>
         </div>
         <br>
